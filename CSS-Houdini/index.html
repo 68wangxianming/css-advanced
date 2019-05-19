@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .el {
+            --elUnit: 500px;
+            --arcColor: #8266ff;
+            height: var(--elUnit);
+            width: var(--elUnit);
+            background: url("../test.png");
+            --background-canvas: (ctx, geom)=> {
+                ctx.strokeStyle= `var(--arcColor)`;
+                ctx.lineWidth=2;
+                ctx.beginPath();
+                ctx.arc(200, 200, 50, 0, 2*Math.PI);
+                ctx.stroke();
+                ctx.closePath();
+            };
+            background: paint(background-canvas);
+        }
+    </style>
+    <title>Houdini实战1</title>
+</head>
+
+<body>
+    <div class="el"></div>
+</body>
+<script>
+    CSS.paintWorklet.addModule("./arc.js");
+</script>
+
+</html>

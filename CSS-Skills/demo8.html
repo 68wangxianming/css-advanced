@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #333;
+        }
+        .container{
+            width: 400px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            margin: auto;
+            scroll-snap-align: x mandatory;
+        }
+        .container img{
+            width: 400px;
+            scroll-snap-align: start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/1.jpeg" alt="">
+        <img src="./assets/2.jpeg" alt="">
+        <img src="./assets/3.jpeg" alt="">
+        <img src="./assets/4.jpeg" alt="">
+        <img src="./assets/5.jpeg" alt="">
+        <img src="./assets/6.jpeg" alt="">
+        <img src="./assets/7.jpeg" alt="">
+        <img src="./assets/8.jpeg" alt="">
+    </div>
+</body>
+</html>
