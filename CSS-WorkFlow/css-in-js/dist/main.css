@@ -1,0 +1,26 @@
+:root{
+    --baseBackground:yellowgreen;
+    --baseSize:1rem;
+}
+
+.widget-nav{
+    float:left;
+    font-size: 1rem;
+    font-size: var(--baseSize);
+}
+
+.widget-nav__item a{
+        color: yellowgreen;
+        color: var(--baseBackground);
+    }
+
+.widget-nav--active{
+    color: aqua;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
